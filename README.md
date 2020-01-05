@@ -27,3 +27,4 @@
 - Update component was not created in front-end.  This works in the backend.  Needs more work.
 - The Angular front-end sends rest requests to backend, which in turn produces the respective messages which are later consumed accordingly.  
   **Ideally, a thin backend layer would support the ui, which would include the producer, rather than including this logic in the current booking-manager-api backend app**
+- **MessageBookingController** and **BookingController** represent asynchronous and synchronous flows respectively.
