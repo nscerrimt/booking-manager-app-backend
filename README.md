@@ -3,6 +3,7 @@
 
 ## Before Running Backend
 - Set "spring.rabbitmq.host" property in application.properties to point to the local rabbit-mq instance
+- Backend application will run on **localhost:8080**
 
 ```docker run -d --hostname ecabs-rabbit --name rabbit-assignment -e RABBITMQ_DEFAULT_VHOST=/ -p 4369:4369 -p 5672:5672 -p 15672:15672 -p 25672:25672 rabbitmq:3-management```
 
