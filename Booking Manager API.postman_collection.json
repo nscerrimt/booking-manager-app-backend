@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "2cfa7c00-58c4-4267-8b77-ec09b87c0d68",
+		"name": "Booking Manager API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REST - Synchronous",
+			"item": [
+				{
+					"name": "Add Booking with Trip Way Point",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"passengerName\": \"Martin Abela\",\r\n\t\"passengerContactNumber\": \"79234562\",\r\n\t\"pickupTime\": \"2020-01-02T10:15:30+01:00\",\r\n\t\"asap\": true,\r\n\t\"noOfPassengers\": 2,\r\n\t\"price\": 12,\r\n\t\"tripWayPoints\": [\r\n\t\t{\r\n\t\t\t\"lastStop\": false,\r\n\t\t\t\"locality\": \"Luqa\",\r\n\t\t\t\"lat\" : 543.2002,\r\n\t\t\t\"lng\": 493.2393\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"lastStop\": true,\r\n\t\t\t\"locality\": \"Sliema\",\r\n\t\t\t\"lat\" : 234.324,\r\n\t\t\t\"lng\": 544.223\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookings/724cb3ff-4caf-4136-b1e7-519fc1651c7a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"724cb3ff-4caf-4136-b1e7-519fc1651c7a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking By ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingId\": \"066ec567-c49f-418f-a3d4-82c88b44dbf4\",\r\n\t\"passengerName\": \"Tom Abela\",\r\n\t\"passengerContactNumber\": \"79234562\",\r\n\t\"pickupTime\": \"2020-01-02T10:15:30+01:00\",\r\n\t\"asap\": true,\r\n\t\"noOfPassengers\": 2,\r\n\t\"price\": 12,\r\n\t\"tripWayPoints\": [\r\n\t\t{\r\n\t\t\t\"lastStop\": false,\r\n\t\t\t\"locality\": \"Luqa\",\r\n\t\t\t\"lat\" : 543.2002,\r\n\t\t\t\"lng\": 493.2393\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookings/066ec567-c49f-418f-a3d4-82c88b44dbf4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"066ec567-c49f-418f-a3d4-82c88b44dbf4"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Messaging - Asynchronous",
+			"item": [
+				{
+					"name": "Add Booking with Trip Way Point",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"passengerName\": \"Martin Abela\",\r\n\t\"passengerContactNumber\": \"79234562\",\r\n\t\"pickupTime\": \"2020-01-02T10:15:30+01:00\",\r\n\t\"asap\": true,\r\n\t\"noOfPassengers\": 2,\r\n\t\"price\": 12,\r\n\t\"tripWayPoints\": [\r\n\t\t{\r\n\t\t\t\"lastStop\": false,\r\n\t\t\t\"locality\": \"Luqa\",\r\n\t\t\t\"lat\" : 543.2002,\r\n\t\t\t\"lng\": 493.2393\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"lastStop\": true,\r\n\t\t\t\"locality\": \"Sliema\",\r\n\t\t\t\"lat\" : 234.324,\r\n\t\t\t\"lng\": 544.223\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/messaging/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messaging",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/bookings/87c05cc0-6f9a-4002-8387-3d1549f3871e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bookings",
+								"87c05cc0-6f9a-4002-8387-3d1549f3871e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking By ID",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"bookingId\": \"87c05cc0-6f9a-4002-8387-3d1549f3871e\",\r\n\t\"passengerName\": \"Tom Schembri\",\r\n\t\"passengerContactNumber\": \"79234562\",\r\n\t\"pickupTime\": \"2020-01-02T10:15:30+01:00\",\r\n\t\"asap\": true,\r\n\t\"noOfPassengers\": 2,\r\n\t\"price\": 12,\r\n\t\"tripWayPoints\": [\r\n\t\t{\r\n\t\t\t\"lastStop\": false,\r\n\t\t\t\"locality\": \"Luqa\",\r\n\t\t\t\"lat\" : 543.2002,\r\n\t\t\t\"lng\": 493.2393\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/messaging/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messaging",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/messaging/bookings/87c05cc0-6f9a-4002-8387-3d1549f3871e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"messaging",
+								"bookings",
+								"87c05cc0-6f9a-4002-8387-3d1549f3871e"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
